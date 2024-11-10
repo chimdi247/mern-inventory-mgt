@@ -119,9 +119,9 @@ const updateProduct = asyncHandler(async (req, res) => {
   let fileData = {};
   
   cloudinary.config({
-    cloud_name: 'dmyr68awx',
-    api_key: '159585475319587',
-    api_secret: 'TQqGLre3fE2Md6lPcunQqPMpLlg',
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
   });
 
   if (req.file) {
